@@ -1,13 +1,13 @@
-package programerzamannow.restful;
+package contactmanagement.restful;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BelajarSpringResTfulApiApplication {
+public class ContactManagementResTfulApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BelajarSpringResTfulApiApplication.class, args);
+        SpringApplication.run(ContactManagementResTfulApiApplication.class, args);
     }
 
 }
