@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,7 +19,7 @@ public class Contact {
     @Id
     private String id;
 
-    @Column(name = "user_id")
+    @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
@@ -27,7 +29,10 @@ public class Contact {
 
     private String email;
 
-    @ManyToOne
+    @ManyToOne  //relasi ke tabel user, jadi banyak kontak bisa milik 1 user
     @JoinColumn(name = "username", referencedColumnName = "username")
     private String user;
+
+    @OneToMany(mappedBy = "contact") //relasi ke class address
+    private List<Address> addresses; //merepresentasikan class address dalam kolom addresses
 }

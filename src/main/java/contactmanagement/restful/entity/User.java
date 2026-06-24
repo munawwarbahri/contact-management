@@ -18,7 +18,7 @@ import java.util.List;
 public class User {
 
     @Id
-    private String userId;
+    private String username;
 
     private String password;
 
@@ -30,6 +30,6 @@ public class User {
     private Long tokenExiredAt;
 
     @OneToMany(mappedBy = "user")
-    private List<Contact> contacts;
+    private List<Contact> contacts; // merepresentasikan class contact dalam kolom contacts
 
 }
